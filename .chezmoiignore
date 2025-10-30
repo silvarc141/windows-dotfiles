@@ -1,0 +1,9 @@
+{{ if ne .chezmoi.os "windows" }}
+~/_vimrc
+~/AppData/
+~/scoop/
+~/dot_glaze-wm/
+~/Documents/
+{{ else }}
+~/.vimrc
+{{ end }}
