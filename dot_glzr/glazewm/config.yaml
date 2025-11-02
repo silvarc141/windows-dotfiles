@@ -1,0 +1,273 @@
+highlight: &highlight "#FFFFFFFF"
+base: &base "#FFFFFF55"
+background: &background "#00000001" # not completely transparent because it makes areas not clickable
+
+# gaps:
+#   inner_gap: 3
+#   outer_gap: 0
+
+focus_borders:
+  active:
+    enabled: true
+    color: "#e0af68"
+  inactive:
+    enabled: true
+    color: "#937344"
+
+general:
+  show_floating_on_top: false
+  floating_window_move_amount: "6%"
+  toggle_workspace_on_refocus: false
+  focus_follows_cursor: false
+  cursor_follows_focus: false
+
+bar:
+  height: "30"
+  position: "top"
+  background: "transparent"
+  foreground: *highlight
+  #font_family: "Segoe UI"
+  font_family: "CaskaydiaCove Nerd Font"
+  #font_family: "CodeNewRoman Nerd Font"
+  #font_family:  "Iosevka Nerd Font"
+  padding: 0
+  margin: 0
+  offset_x: 0
+  offset_y: 0
+  border_radius: 0
+  border_width: 0
+  border_color: "transparent"
+
+  components_left:
+    - type: "workspaces"
+      background: "transparent"
+      border_width: 0
+      padding: 0
+      margin: 0
+      offset_x: 0
+      offset_y: 0
+      focused_workspace_foreground: *highlight
+      focused_workspace_background: *background
+      focused_workspace_border_color: *background
+      default_workspace_foreground: *base
+      default_workspace_background: *background
+      default_workspace_border_color: *background
+      displayed_workspace_foreground: *base
+      displayed_workspace_background: *background
+      displayed_workspace_border_color: *background
+
+  components_right:
+    - type: "clock"
+      font_family: "Iosevka Nerd Font"
+      font_size: "15px"
+      font_weight: "800"
+      foreground: *highlight
+      margin: "0 10 0 0"
+      time_formatting: "ddd dd/MM/yy   HH:mm"
+
+workspaces:
+  - name: "m0w0"
+    display_name: "Q"
+    bind_to_monitor: 1
+  - name: "m0w1"
+    display_name: "W"
+    bind_to_monitor: 1
+  - name: "m0w2"
+    display_name: "E"
+    bind_to_monitor: 1
+  - name: "m0w3"
+    display_name: "R"
+    bind_to_monitor: 1
+  - name: "m0w4"
+    display_name: "T"
+    bind_to_monitor: 1
+
+  - name: "m1w0"
+    display_name: "1"
+    bind_to_monitor: 2
+  - name: "m1w1"
+    display_name: "2"
+    bind_to_monitor: 2
+  - name: "m1w2"
+    display_name: "3"
+    bind_to_monitor: 2
+  - name: "m1w3"
+    display_name: "4"
+    bind_to_monitor: 2
+  - name: "m1w4"
+    display_name: "5"
+    bind_to_monitor: 2
+
+# window_rules:
+#   - command: "ignore"
+#     match_process_name: "RoundedTB"
+#   - command: "ignore"
+#     match_process_name: "/LeagueOfLegends|League Of Legends|LeagueClient/"
+#   - command: "ignore"
+#     match_class_name: "RiotWindowClass"
+#   - command: "ignore"
+#     match_process_name: "bg3_dx11"
+#   - command: "ignore"
+#     match_process_name: "RotMG Exalt"
+#   - command: "ignore"
+#     match_process_name: "Discovery"
+#
+#   - command: "set floating"
+#     match_class_name: "#32770" # system dialogs as floating
+#   - command: "set floating"
+#     match_process_name: "1Password"
+#   - command: "set floating"
+#     match_process_name: "FluentSearch"
+#   - command: "set floating"
+#     match_process_name: "KeyboardSplitter"
+#   - command: "set floating"
+#     match_process_name: "LariLauncher"
+#   - command: "set floating"
+#     match_process_name: "copyq"
+#
+#   - command: "move to workspace m0w0"
+#     match_process_name: "Unity"
+#   - commands: ["move to workspace m0w0", "set floating"]
+#     match_process_name: "Unity Hub"
+#
+#   - command: "move to workspace m0w1"
+#     match_process_name: "rider64"
+#   - command: "set floating"
+#     match_class_name: "SunAwtDialog"
+#
+#   - command: "move to workspace m0w2"
+#     match_process_name: "plastic"
+#
+#   - command: "move to workspace m0w3"
+#     match_process_name: "VSCodium"
+#     match_class_name: "Chrome_WidgetWin_1"
+#
+#   - commands: ["resize borders 0px -7px -7px -7px", "move to workspace m1w0"]
+#     match_process_name: "Obsidian"
+#
+#   - commands: ["move to workspace m1w2"]
+#     match_process_name: "/Discord|Vesktop|ArmCord/"
+#   - command: "resize borders 0px 1px 1px 1px"
+#     match_process_name: "/Vesktop|ArmCord/"
+#
+#   - commands: ["move to workspace m1w3", "move up"]
+#     match_process_name: "Spark Desktop"
+#     match_class_name: "Chrome_WidgetWin_1"
+#
+#   - commands: ["move to workspace m1w3"]
+#     match_process_name: "Beeper"
+#
+#   - commands: ["move to workspace m1w1", "resize borders 0 -2px 0px -2px"]
+#     match_process_name: "firefox"
+#   - commands: ["move to workspace m1w1", "resize borders 0 -7px -7px -7px"]
+#     match_process_name: "vivaldi"
+#
+#   - commands: ["move to workspace m0w4", "resize borders 0px -7px -7px -7px"]
+#     match_process_name: "/steamwebhelper|steam/"
+#   - commands: ["move to workspace m0w4"]
+#     match_process_name: "Battle.net"
+#   - commands: ["move to workspace m0w4"]
+#     match_process_name: "Heroic"
+#   - commands: ["move to workspace m0w4"]
+#     match_process_name: "EpicGamesLauncher"
+
+# binding_modes:
+#   - name: "send"
+#     keybindings:
+#       - commands: ["binding mode none", "move left"]
+#         binding: "NumPad4"
+#       - commands: ["binding mode none", "move down"]
+#         binding: "NumPad2"
+#       - commands: ["binding mode none", "move up"]
+#         binding: "NumPad8"
+#       - commands: ["binding mode none", "move right"]
+#         binding: "NumPad6"
+#
+#       - commands: ["binding mode none", "move to workspace m0w0"]
+#         binding: "F18"
+#       - commands: ["binding mode none", "move to workspace m0w1"]
+#         binding: "F19"
+#       - commands: ["binding mode none", "move to workspace m0w2"]
+#         binding: "F20"
+#       - commands: ["binding mode none", "move to workspace m0w3"]
+#         binding: "F21"
+#       - commands: ["binding mode none", "move to workspace m0w4"]
+#         binding: "Decimal"
+#
+#       - commands: ["binding mode none", "move to workspace m1w0"]
+#         binding: "F13"
+#       - commands: ["binding mode none", "move to workspace m1w1"]
+#         binding: "F14"
+#       - commands: ["binding mode none", "move to workspace m1w2"]
+#         binding: "F15"
+#       - commands: ["binding mode none", "move to workspace m1w3"]
+#         binding: "F16"
+#       - commands: ["binding mode none", "move to workspace m1w4"]
+#         binding: "F17"
+#
+#       - command: "binding mode none"
+#         binding: "Escape"
+
+keybindings:
+  - command: "tiling direction toggle"
+    binding: "Divide"
+  - command: "binding mode send"
+    binding: "Multiply"
+  - command: "close"
+    binding: "NumPad5"
+  - command: "toggle maximized"
+    binding: "F24"
+  - command: "focus mode toggle"
+    binding: "NumLock"
+  - command: "exit wm"
+    binding: "Subtract"
+  - command: "reload config"
+    binding: "Add"
+  - command: "focus workspace next"
+    binding: "F22"
+  - command: "focus workspace prev"
+    binding: "F23"
+  # - command: "toggle floating"
+  #   binding: "Alt+Shift+T"
+  # - command: "set minimized"
+  #   binding: "Alt+Shift+X"
+
+  - command: "resize width +10%"
+    binding: "NumPad1"
+  - command: "resize width -10%"
+    binding: "NumPad3"
+  - command: "resize height +10%"
+    binding: "NumPad7"
+  - command: "resize height -10%"
+    binding: "NumPad9"
+
+  - command: "focus left"
+    binding: "NumPad4"
+  - command: "focus down"
+    binding: "NumPad2"
+  - command: "focus up"
+    binding: "NumPad8"
+  - command: "focus right"
+    binding: "NumPad6"
+
+  - command: "focus workspace m1w0"
+    binding: "F13"
+  - command: "focus workspace m1w1"
+    binding: "F14"
+  - command: "focus workspace m1w2"
+    binding: "F15"
+  - command: "focus workspace m1w3"
+    binding: "F16"
+  - command: "focus workspace m1w4"
+    binding: "F17"
+
+  - command: "focus workspace m0w0"
+    binding: "F18"
+  - command: "focus workspace m0w1"
+    binding: "F19"
+  - command: "focus workspace m0w2"
+    binding: "F20"
+  - command: "focus workspace m0w3"
+    binding: "F21"
+  - command: "focus workspace m0w4"
+    binding: "Decimal"
