@@ -1,6 +1,6 @@
 Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
-
+#Set-PSReadLineOption -PredictionSource Plugin
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 Get-ChildItem ~/.config/ps-scripts/common | Foreach-Object {. $_}
